@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 0px;
   /* seletor universal */
 }
 
@@ -8,7 +8,7 @@ body {
   --black: hsl(240, 6%, 13%);
   --grey: hsl(240, 9%, 89%);
 
-  height: 100%;
+  height: 100vh;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -19,12 +19,15 @@ body {
   background: rgb(218, 214, 214);
 }
 
+.faixa {
+  display: none;
+}
+
 main {
-  background: url(images/Mobile.png);
-  width: 375px;
-  height: 812px;
+  background: url(images/Mobile1.svg) no-repeat center/cover;
+  width: 100vw;
+  height: 100vh;
   color: var(--grey);
-  border-radius: 2rem;
 }
 
 .container {
@@ -37,7 +40,6 @@ main {
 .avatar {
   width: 10rem;
   margin: 11.5rem auto 0;
-
   position: relative;
 }
 
@@ -79,6 +81,13 @@ p {
   text-align: match-parent;
 }
 
+.linkedinImg,
+.facebookImg,
+.instagramImg,
+.twitterImg {
+  border-radius: 10px;
+}
+
 ul {
   margin-top: 4rem;
   list-style: none;
@@ -92,4 +101,57 @@ ul {
 
 h1 {
   font-size: 1.5rem;
+}
+
+@media (min-width: 960px) {
+  body {
+    background-image: linear-gradient(
+      to right bottom,
+      #2073f0,
+      #006cc4,
+      #005b8d,
+      #004657,
+      #002f2f,
+      #033630,
+      #0b3d30,
+      #18432f,
+      #166c45,
+      #0d985b,
+      #00c56f,
+      #05f582
+    );
+  }
+
+  main {
+    height: 540px;
+    width: 358px;
+    -webkit-box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.35);
+    box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 1rem;
+    place-self: start center;
+    position: relative;
+    margin-top: 8rem;
+  }
+
+  .faixa {
+    display: block;
+    height: 10.25rem;
+    position: fixed;
+    z-index: 1;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%, -50%); /*centralizando imagem*/
+  }
+
+  .avatar {
+    margin-top: 38%;
+  }
+
+  p {
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    margin-top: 1.5rem;
+  }
 }
